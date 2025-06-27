@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KevinCompany - Innovación Tecnológica</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+    <header>
+        <div class="auth-links">
+            <a href="auth.html">Ingresar</a>
+        </div>
+        <h1>KevinCompany</h1>
+        <p>Transformamos ideas en soluciones tecnológicas innovadoras</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre-nosotros">
+        <h2 style="text-align: center;">¿Quiénes Somos?</h2>
+        <div class="sobre-nosotros-container">
+            <img src="assets/images/MyCompany.png" alt="Nuestra empresa en acción" class="imagen-empresa hover-animacion">
+            <div class="texto-sobre-nosotros">
+                <p>En <strong>KevinCompany</strong>, ofrecemos soluciones tecnológicas innovadoras para empresas de todos los tamaños.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desarrollo Web</td>
+                        <td>Creación de sitios web responsivos y optimizados</td>
+                        <td>$500 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Consultoría en TI</td>
+                        <td>Asesoramiento para mejorar infraestructuras tecnológicas</td>
+                        <td>$300 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Soporte Técnico</td>
+                        <td>Asistencia y mantenimiento de sistemas</td>
+                        <td>$200 USD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonios-container">
+            <div class="testimonio">
+                <p>"KevinCompany transformó mi negocio con una increíble página web."</p>
+                <strong>- Sid Philips</strong>
+            </div>
+            <div class="testimonio">
+                <p>"La mejor inversión en tecnología que hemos hecho."</p>
+                <strong>- Sid Ice</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <details>
+            <summary>¿Cuáles son los tiempos de entrega?</summary>
+            <p>Dependiendo del servicio, nuestros tiempos varían de 2 a 4 semanas.</p>
+        </details>
+        <details>
+            <summary>¿Ofrecen soporte post-venta?</summary>
+            <p>Sí, ofrecemos 3 meses de soporte gratuito después de la entrega del proyecto.</p>
+        </details>
+    </section>
+
+    <section id="nuestro-equipo">
+        <h2 style="text-align: center;">Nuestro Equipo</h2>
+        <div class="perfil-container" style="display: flex; justify-content: center; gap: 20px;">
+            <div class="perfil-card">
+                <img src="assets/images/sid.jpg" alt="Foto de perfil">
+                <h3>Sid Philips</h3>
+                <p>Desarrollador Web</p>
+                <p>Sid.pelao@kevincompany.com</p>
+                <p>Apasionado por crear soluciones tecnológicas innovadoras,
+                    Sigo mi camino ideal para enfrentar mis nuevos desafios.</p>
+            </div>
+            <!-- Nuevo perfil al lado -->
+            <div class="perfil-card">
+                <img src="assets/images/slowsid.jpg" alt="Foto de perfil">
+                <h3>Sid Ice</h3>
+                <p>Diseñador</p>
+                <p>SidHielo@kevincompany.com</p>
+                <p>Inspirado en lograr todo lo que tengo a mi paso, Siempre activo, Siempre me levanto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 style="text-align: center;">Contacto</h2>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <button id="scroll-top">↑</button>
+
+    <footer>
+        <p>&copy; 2025 KevinCompany - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.querySelectorAll("#faq details").forEach((detail) => {
+            detail.addEventListener("click", function () {
+                document.querySelectorAll("#faq details").forEach((otherDetail) => {
+                    if (otherDetail !== detail) {
+                        otherDetail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
